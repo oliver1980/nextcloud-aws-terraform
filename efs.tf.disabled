@@ -7,9 +7,16 @@ resource "aws_efs_file_system" "nextcloud" {
 resource "aws_efs_mount_target" "nextcloud-subnet-pa" {
   file_system_id = "${aws_efs_file_system.nextcloud.id}"
   subnet_id      = "${var.public-subnet-a}"
+
+  security_groups = [
+     "${aws_security_group.efs.id}",
+   ]
 }
 
 resource "aws_efs_mount_target" "nextcloud-subnet-pb" {
   file_system_id = "${aws_efs_file_system.nextcloud.id}"
   subnet_id      = "${var.public-subnet-b}"
+  security_groups = [
+     "${aws_security_group.efs.id}",
+   ]
 }

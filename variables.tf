@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Name of this project"
+  description = "ECS / EFS Evaluation"
 }
 
 variable "aws_region" {
@@ -8,3 +8,5 @@ variable "aws_region" {
 
 variable "public-subnet-a" {}
 variable "public-subnet-b" {}
+
+variable "vpc-id" {}
