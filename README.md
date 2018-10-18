@@ -9,3 +9,5 @@
 - Migration Owncloud auf Host -> Nextcloud in Container auf Host durchführen
 - Alte Owncloud Umgebung deaktivieren
 - (Ggf noch opensprinkler webservice ebenfalls in eigenen Container auslagern so dass Host wirklich leergeräumt ist bis auf docker-daemon)
+- eventuell zweite Elastic IP verwenden um mit den Ports keine Überschneidungen zu haben
+- nextcloud php-fm image verwenden. webserver soll ja weiterhin direkt auf host laufen, bzw später mal in separatem container (weil ja nicht nur nextcloud gehostet werden soll, sondern auch weiterhin opensprinkler und co)
